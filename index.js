@@ -42,18 +42,13 @@ function showMovies(movies){
 }
 
 
-//  step 1 make a function
 async function getMovies(url) {
     const res = await fetch(url);
     const respdata = await res.json();
     showMovies(respdata.results);
-    // console.log(respdata);
 }
+
 getMovies(APIURL);
-
-
-// getMovies(SEARCHAPI);
-
 
 
 form.addEventListener("submit" , (e)=>{
